@@ -4,7 +4,9 @@ import { DefinePlugin, ProgressPlugin, HotModuleReplacementPlugin } from 'webpac
 import type { Configuration as WebpackConfigurations } from 'webpack'
 import type { Configuration as WebpackDevServerConfigurations } from 'webpack-dev-server'
 
-type Configuration = { devServer?: WebpackDevServerConfigurations } & WebpackConfigurations
+type Configuration = {
+    devServer?: WebpackDevServerConfigurations
+} & WebpackConfigurations
 
 type TBuidEnv = {
     NODE_ENV: 'production' | 'development'
@@ -113,7 +115,9 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             proxy: [
                 {
                     // Перезапись пути для перенаправления запросов
-                    pathRewrite: { '^api/facts': '' },
+                    pathRewrite: {
+                        '^api/facts': '',
+                    },
                     // Контекст запросов для перенаправления
                     context: 'api/facts',
                     // Целевой сервер

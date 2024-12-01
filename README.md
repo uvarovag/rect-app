@@ -1,20 +1,15 @@
 # Пример react приложения
 
-## Описаны настройки файлов:
-
-- .eslintrc.json
-- .prettierrc
-- tsconfig.json
-- webpack.config.ts
-
-## Настройки vs code для применения prettier при сохранение
+## vscode settings.json
 
 ```json
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
     "editor.formatOnSave": true,
-    "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact"]
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.requireConfig": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
 }
 ```

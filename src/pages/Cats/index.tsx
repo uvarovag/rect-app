@@ -1,3 +1,1 @@
-import Cats from './Cats'
-
-export default Cats
+export { Cats } from './Cats'

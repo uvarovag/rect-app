@@ -1,10 +1,8 @@
-import Navbar from 'widgets/Navbar'
+import { Navbar } from 'widgets/Navbar'
 
-const Cats = () => (
+export const Cats = () => (
     <>
         <h2>Cats Page</h2>
         <Navbar />
     </>
 )
-
-export default Cats

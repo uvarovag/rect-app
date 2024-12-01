@@ -1,3 +1,1 @@
-import Dogs from './Dogs'
-
-export default Dogs
+export { Dogs } from './Dogs'

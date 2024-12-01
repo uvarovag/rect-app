@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-const Navbar = () => (
+export const Navbar = () => (
     <ul>
         <li>
             <Link to="/animals/cats">cats</Link>
@@ -10,5 +10,3 @@ const Navbar = () => (
         </li>
     </ul>
 )
-
-export default Navbar

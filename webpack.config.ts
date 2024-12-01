@@ -100,7 +100,6 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             // Поддержка Hot Module Replacement для обновления модулей без перезагрузки страницы
             new HotModuleReplacementPlugin(),
         ],
-
         // Настройки DevServer для разработки
         devServer: {
             // Порт разработки

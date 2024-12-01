@@ -4,7 +4,7 @@
     "description": "",
     "main": "src/index.tsx",
     "scripts": {
-        "start": "webpack serve --env NODE_ENV=development",
+        "start": "webpack serve --env NODE_ENV=development PUBLIC_PATH=/",
         "build:dev": "webpack --env NODE_ENV=development",
         "build:prod": "webpack --env NODE_ENV=production",
         "format": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && eslint '**/*.{ts,tsx}' --fix"
@@ -14,17 +14,19 @@
     "license": "ISC",
     "dependencies": {
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-router": "^7.0.1"
     },
     "devDependencies": {
         "@svgr/webpack": "^8.1.0",
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.3.1",
+        "@types/react-router": "^5.1.20",
         "@types/webpack": "^5.28.5",
         "@types/webpack-dev-server": "^4.7.1",
         "@typescript-eslint/eslint-plugin": "^8.16.0",
         "@typescript-eslint/parser": "^8.16.0",
-        "@uvarovag/eslint-config-ts-react": "^1.0.0",
+        "@uvarovag/eslint-config-ts-react": "^1.0.1",
         "@uvarovag/prettier-config-ts-react": "^1.0.0",
         "@uvarovag/tsconfig-react": "^1.0.0",
         "css-loader": "^7.1.2",

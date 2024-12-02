@@ -18,6 +18,7 @@
         "react-router": "^7.0.1"
     },
     "devDependencies": {
+        "@feature-sliced/eslint-config": "^0.1.1",
         "@svgr/webpack": "^8.1.0",
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.3.1",
@@ -26,13 +27,14 @@
         "@types/webpack-dev-server": "^4.7.1",
         "@typescript-eslint/eslint-plugin": "^8.16.0",
         "@typescript-eslint/parser": "^8.16.0",
-        "@uvarovag/eslint-config-ts-react": "^1.0.2",
+        "@uvarovag/eslint-config-ts-react": "^1.0.18",
         "@uvarovag/prettier-config-ts-react": "^1.0.0",
         "@uvarovag/tsconfig-react": "^1.0.0",
         "css-loader": "^7.1.2",
         "eslint": "^8.57.1",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-boundaries": "^5.0.1",
         "eslint-plugin-import": "^2.31.0",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-prettier": "^5.2.1",

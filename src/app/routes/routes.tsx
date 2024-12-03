@@ -1,20 +1,19 @@
-import { Providers } from 'app/providers'
-import { Cats } from 'pages/Cats'
-import { Dogs } from 'pages/Dogs'
 import { RouteObject } from 'react-router'
+import { Providers } from 'app/providers'
+import { Pokemon } from 'pages/Pokemon'
+import { Pokemons } from 'pages/Pokemons'
 
 export const routes: RouteObject[] = [
     {
-        path: '/animals',
         element: <Providers />,
         children: [
             {
-                path: 'cats',
-                element: <Cats />,
+                index: true,
+                element: <Pokemons />,
             },
             {
-                path: 'dogs',
-                element: <Dogs />,
+                path: ':pokemonId',
+                element: <Pokemon />,
             },
         ],
     },

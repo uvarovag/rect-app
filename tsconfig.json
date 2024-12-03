@@ -1,6 +1,6 @@
 {
     "extends": "@uvarovag/tsconfig-react",
-    "include": ["src"],
+    "include": ["src", "global.d.ts"],
     "exclude": ["node_modules", "dist"],
     "compilerOptions": {
         "outDir": "./dist/",

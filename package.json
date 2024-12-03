@@ -1,5 +1,5 @@
 {
-    "name": "app-react",
+    "name": "react-app",
     "version": "1.0.0",
     "description": "",
     "main": "src/index.tsx",
@@ -13,8 +13,10 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
+        "@reduxjs/toolkit": "^2.4.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "react-redux": "^9.1.2",
         "react-router": "^7.0.1"
     },
     "devDependencies": {
@@ -27,7 +29,7 @@
         "@types/webpack-dev-server": "^4.7.1",
         "@typescript-eslint/eslint-plugin": "^8.16.0",
         "@typescript-eslint/parser": "^8.16.0",
-        "@uvarovag/eslint-config-ts-react": "^1.0.18",
+        "@uvarovag/eslint-config-ts-react": "^1.1.4",
         "@uvarovag/prettier-config-ts-react": "^1.0.0",
         "@uvarovag/tsconfig-react": "^1.0.0",
         "css-loader": "^7.1.2",

@@ -113,14 +113,18 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             // Настройки прокси для перенаправления API-запросов
             proxy: [
                 {
+                    // Отключает проверку SSL-сертификата для целевого сервера
+                    secure: false,
+                    // Изменяет заголовок "Host" на целевой при проксировании
+                    changeOrigin: true,
                     // Перезапись пути для перенаправления запросов
                     pathRewrite: {
-                        '^api/facts': '',
+                        '^/pokeapi': '',
                     },
                     // Контекст запросов для перенаправления
-                    context: 'api/facts',
+                    context: '/pokeapi',
                     // Целевой сервер
-                    target: 'https://catfact.ninja/facts',
+                    target: 'https://pokeapi.co/api/v2/',
                 },
             ],
         },

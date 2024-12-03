@@ -1,10 +1,12 @@
+import { Provider } from 'react-redux'
 import { Outlet } from 'react-router'
+import { store } from 'app/model'
 import { Navbar } from 'widgets/Navbar'
 
 export const Providers = () => (
-    <>
-        <h1>Animals app</h1>
+    <Provider store={store}>
+        <h1>Pokemons App</h1>
         <Navbar />
         <Outlet />
-    </>
+    </Provider>
 )

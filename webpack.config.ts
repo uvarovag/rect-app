@@ -1,6 +1,9 @@
+import { camelCase } from 'camel-case'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'node:path'
-import { DefinePlugin, ProgressPlugin, HotModuleReplacementPlugin } from 'webpack'
+import { DefinePlugin, ProgressPlugin, HotModuleReplacementPlugin, container } from 'webpack'
+
+import packageJson from './package.json'
 
 import type { Configuration as WebpackConfigurations } from 'webpack'
 import type { Configuration as WebpackDevServerConfigurations } from 'webpack-dev-server'
@@ -38,6 +41,8 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             filename: '[name].[contenthash:8].js',
             // Очистка директории перед сборкой
             clean: true,
+            // Настройка уникального имени сборки (важно для Module Federation)
+            uniqueName: camelCase(packageJson.name),
         },
         // Настройки разрешения модулей
         resolve: {
@@ -92,7 +97,7 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'public', 'index.html'),
             }),
-            // Определение глобальной переменной IS_DEV для использования в коде
+            // Определение глобальных переменных окружения для использования в коде
             new DefinePlugin({
                 IS_DEV: JSON.stringify(isDev),
             }),
@@ -100,6 +105,33 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             new ProgressPlugin(),
             // Поддержка Hot Module Replacement для обновления модулей без перезагрузки страницы
             new HotModuleReplacementPlugin(),
+            // Module Federation предоставляет модули другим приложениям и подключает модули из удалённых приложений
+            new container.ModuleFederationPlugin({
+                // Уникальное имя для удаленного приложения
+                name: camelCase(packageJson.name),
+                // Имя файла, содержащего удаленные модули (remote entry point)
+                filename: 'remoteEntry.js',
+                // Модули которые будут доступны другим приложениям
+                exposes: {
+                    './routes': './src/app', // Экспорт модуля из './src/app' под именем './routes'
+                },
+                // Общие зависимости, которые могут использоваться между приложениями
+                shared: {
+                    ...packageJson.dependencies,
+                    react: {
+                        eager: true, // Загружается сразу
+                        requiredVersion: packageJson.dependencies.react,
+                    },
+                    'react-dom': {
+                        eager: true,
+                        requiredVersion: packageJson.dependencies['react-dom'],
+                    },
+                    'react-router': {
+                        eager: true,
+                        requiredVersion: packageJson.dependencies['react-router'],
+                    },
+                },
+            }),
         ],
         // Настройки DevServer для разработки
         devServer: {

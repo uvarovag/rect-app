@@ -9,7 +9,14 @@
         "build:prod": "webpack --env NODE_ENV=production",
         "format": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && eslint '**/*.{ts,tsx}' --fix"
     },
-    "keywords": [],
+    "keywords": [
+        "Module Federation Ready",
+        "Standalone and Remote Modes",
+        "Feature-Sliced Design (FSD)",
+        "React and React DOM",
+        "React Router Object API",
+        "RTK Query"
+    ],
     "author": "",
     "license": "MIT",
     "dependencies": {

@@ -1,4 +1,5 @@
 import { useParams } from 'react-router'
+
 import { usePokemonQuery } from 'entities/pokemon'
 
 export const Pokemon = () => {

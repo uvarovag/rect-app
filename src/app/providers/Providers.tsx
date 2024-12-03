@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux'
 import { Outlet } from 'react-router'
+
 import { store } from 'app/model'
 import { Navbar } from 'widgets/Navbar'
 

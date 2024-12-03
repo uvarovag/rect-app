@@ -1,4 +1,5 @@
 import { RouteObject } from 'react-router'
+
 import { Providers } from 'app/providers'
 import { Pokemon } from 'pages/Pokemon'
 import { Pokemons } from 'pages/Pokemons'

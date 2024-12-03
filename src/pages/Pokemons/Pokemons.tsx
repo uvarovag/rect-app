@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+
 import { usePokemonsQuery } from 'entities/pokemon'
 
 export const Pokemons = () => {

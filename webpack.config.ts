@@ -1,6 +1,7 @@
-import path from 'node:path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'node:path'
 import { DefinePlugin, ProgressPlugin, HotModuleReplacementPlugin } from 'webpack'
+
 import type { Configuration as WebpackConfigurations } from 'webpack'
 import type { Configuration as WebpackDevServerConfigurations } from 'webpack-dev-server'
 

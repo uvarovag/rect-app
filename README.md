@@ -1,15 +1,10 @@
-# Пример react приложения
+# React App Playground
 
-## vscode settings.json
+## Features
 
-```json
-{
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.requireConfig": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
-}
-```
+- Module Federation Ready
+- Standalone and Remote Modes
+- Feature-Sliced Design (FSD)
+- React and React DOM
+- React Router Object API
+- RTK Query

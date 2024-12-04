@@ -6,7 +6,7 @@ import { Navbar } from 'widgets/Navbar'
 
 export const Providers = () => (
     <Provider store={store}>
-        <h1>Pokemons App</h1>
+        <h1>React App</h1>
         <Navbar />
         <Outlet />
     </Provider>

@@ -1,8 +1,8 @@
 import { RouteObject } from 'react-router'
 
 import { Providers } from 'app/providers'
-import { Pokemon } from 'pages/Pokemon'
-import { Pokemons } from 'pages/Pokemons'
+import { List } from 'pages/List'
+import { Object } from 'pages/Object'
 
 export const routes: RouteObject[] = [
     {
@@ -10,11 +10,12 @@ export const routes: RouteObject[] = [
         children: [
             {
                 index: true,
-                element: <Pokemons />,
+
+                element: <List />,
             },
             {
-                path: ':pokemonId',
-                element: <Pokemon />,
+                path: ':objectId',
+                element: <Object />,
             },
         ],
     },

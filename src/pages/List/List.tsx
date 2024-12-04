@@ -2,11 +2,11 @@ import { Link } from 'react-router'
 
 import { usePokemonsQuery } from 'entities/pokemon'
 
-export const Pokemons = () => {
+export const List = () => {
     const { data } = usePokemonsQuery('')
     return (
         <>
-            <h2>Pokemons Page</h2>
+            <h2>List Page</h2>
             <ul>
                 {data?.results.map(({ name }) => (
                     <li key={name}>

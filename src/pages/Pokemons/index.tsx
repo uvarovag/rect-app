@@ -1,1 +1,0 @@
-export { Pokemons } from './Pokemons'

@@ -16,7 +16,7 @@ type TPokemonResponse = {
 
 export const pokemonApi = createApi({
     reducerPath: 'pokemonApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'pokeapi' }),
+    baseQuery: fetchBaseQuery({ baseUrl: '/pokeapi' }),
     endpoints: (builder) => ({
         pokemons: builder.query<TPokemonsResponse, string>({
             query: () => 'pokemon',

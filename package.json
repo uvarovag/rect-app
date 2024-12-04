@@ -4,7 +4,7 @@
     "description": "",
     "main": "src/index.tsx",
     "scripts": {
-        "start": "webpack serve --env NODE_ENV=development PUBLIC_PATH=/",
+        "start": "webpack serve --env NODE_ENV=development",
         "build:dev": "webpack --env NODE_ENV=development",
         "build:prod": "webpack --env NODE_ENV=production",
         "format": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && eslint '**/*.{ts,tsx}' --fix"

@@ -1,4 +1,4 @@
-import { camelCase } from 'camel-case'
+import toCamelCase from '@uvarovag/to-camel-case'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'node:path'
 import { DefinePlugin, ProgressPlugin, HotModuleReplacementPlugin, container } from 'webpack'
@@ -42,7 +42,7 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             // Очистка директории перед сборкой
             clean: true,
             // Настройка уникального имени сборки (важно для Module Federation)
-            uniqueName: camelCase(packageJson.name),
+            uniqueName: toCamelCase(packageJson.name),
         },
         // Настройки разрешения модулей
         resolve: {
@@ -108,7 +108,7 @@ export default ({ NODE_ENV = 'development', PUBLIC_PATH = 'auto', PORT = 3000 }:
             // Module Federation предоставляет модули другим приложениям и подключает модули из удалённых приложений
             new container.ModuleFederationPlugin({
                 // Уникальное имя для удаленного приложения
-                name: camelCase(packageJson.name),
+                name: toCamelCase(packageJson.name),
                 // Имя файла, содержащего удаленные модули (remote entry point)
                 filename: 'remoteEntry.js',
                 // Модули которые будут доступны другим приложениям

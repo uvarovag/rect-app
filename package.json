@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "src/index.tsx",
-    "type": "module",
     "scripts": {
         "start": "webpack serve --env NODE_ENV=development",
         "build:dev": "webpack --env NODE_ENV=development",

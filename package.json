@@ -1,24 +1,17 @@
 {
-    "name": "react-app",
+    "name": "test_app",
     "version": "1.0.0",
-    "description": "",
-    "main": "src/index.tsx",
+    "main": "index.js",
     "scripts": {
         "start": "webpack serve --env NODE_ENV=development",
         "build:dev": "webpack --env NODE_ENV=development",
         "build:prod": "webpack --env NODE_ENV=production",
         "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && eslint '**/*.{ts,tsx}' --fix"
     },
-    "keywords": [
-        "Module Federation Ready",
-        "Standalone and Remote Modes",
-        "Feature-Sliced Design (FSD)",
-        "React and React DOM",
-        "React Router Object API",
-        "RTK Query"
-    ],
+    "keywords": [],
     "author": "",
-    "license": "MIT",
+    "license": "ISC",
+    "description": "",
     "dependencies": {
         "@reduxjs/toolkit": "^2.4.0",
         "react": "^18.3.1",
@@ -28,27 +21,19 @@
         "react-router": "^7.0.1"
     },
     "devDependencies": {
-        "@svgr/webpack": "^8.1.0",
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.3.1",
         "@types/react-router": "^5.1.20",
-        "@types/webpack": "^5.28.5",
-        "@types/webpack-dev-server": "^4.7.1",
-        "@uvarovag/eslint-config-ts-react": "^2.0.11",
-        "@uvarovag/prettier-config": "^1.0.2",
-        "@uvarovag/to-camel-case": "^1.0.12",
-        "@uvarovag/tsconfig-react": "^1.0.1",
-        "css-loader": "^7.1.2",
-        "eslint": "^9.16.0",
-        "file-loader": "^6.2.0",
-        "html-webpack-plugin": "^5.6.3",
+        "@uvarovag/eslint-config-feature-sliced-flat": "^1.0.8",
+        "@uvarovag/eslint-config-ts-react": "^2.0.12",
+        "@uvarovag/prettier-config": "^1.0.5",
+        "@uvarovag/tsconfig-react": "^1.0.4",
+        "@uvarovag/webpack-config-ts-react": "^1.0.0",
+        "eslint": "^9.18.0",
         "prettier": "^3.4.2",
-        "style-loader": "^4.0.0",
-        "ts-loader": "^9.5.1",
         "ts-node": "^10.9.2",
-        "typescript": "^5.7.2",
-        "webpack": "^5.96.1",
-        "webpack-cli": "^5.1.4",
-        "webpack-dev-server": "^5.1.0"
+        "typescript": "^5.7.3",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^5.1.4"
     }
 }

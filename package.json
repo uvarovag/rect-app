@@ -1,16 +1,23 @@
 {
-    "name": "test_app",
+    "name": "react-app",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "src/index.tsx",
     "scripts": {
         "start": "webpack serve --env NODE_ENV=development",
         "build:dev": "webpack --env NODE_ENV=development",
         "build:prod": "webpack --env NODE_ENV=production",
         "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && eslint '**/*.{ts,tsx}' --fix"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "keywords": [
+        "Module Federation Ready",
+        "Standalone and Remote Modes",
+        "Feature-Sliced Design (FSD)",
+        "React and React DOM",
+        "React Router Object API",
+        "RTK Query"
+    ],
+    "author": "@uvarovag",
+    "license": "MIT",
     "description": "",
     "dependencies": {
         "@reduxjs/toolkit": "^2.4.0",

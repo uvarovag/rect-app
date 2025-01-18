@@ -1,8 +1,8 @@
-import type { RouteObject } from 'react-router'
-
 import { Layout } from 'pages/Layout'
 import { List } from 'pages/List'
 import { Object } from 'pages/Object'
+
+import type { RouteObject } from 'react-router'
 
 export const routes: RouteObject[] = [
     {

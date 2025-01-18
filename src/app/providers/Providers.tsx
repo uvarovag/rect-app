@@ -1,4 +1,6 @@
-import { PropsWithChildren, Suspense } from 'react'
+import type { PropsWithChildren } from 'react'
+
+import { Suspense } from 'react'
 import { Provider } from 'react-redux'
 
 import { store } from 'app/model'

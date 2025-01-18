@@ -1,5 +1,6 @@
 import toCamelCase from '@uvarovag/to-camel-case'
 import baseConfig from '@uvarovag/webpack-config-ts-react'
+import { container } from 'webpack'
 import { merge } from 'webpack-merge'
 
 import packageJson from './package.json'
@@ -11,6 +12,30 @@ export default (env: TEnv) =>
         output: {
             uniqueName: toCamelCase(packageJson.name),
         },
+        plugins: [
+            new container.ModuleFederationPlugin({
+                name: toCamelCase(packageJson.name),
+                filename: 'remoteEntry.js',
+                exposes: {
+                    './app': './src/app',
+                },
+                shared: {
+                    ...packageJson.dependencies,
+                    react: {
+                        eager: true,
+                        requiredVersion: packageJson.dependencies.react,
+                    },
+                    'react-dom': {
+                        eager: true,
+                        requiredVersion: packageJson.dependencies['react-dom'],
+                    },
+                    'react-router': {
+                        eager: true,
+                        requiredVersion: packageJson.dependencies['react-router'],
+                    },
+                },
+            }),
+        ],
         devServer: {
             proxy: [
                 {

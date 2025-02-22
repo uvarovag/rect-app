@@ -1,3 +1,3 @@
-import { lazily } from 'react-lazily'
+import { lazy } from 'react'
 
-export const { Object } = lazily(() => import('./Object'))
+export const Object = lazy(() => import('./Object').then((module) => ({ default: module.Object })))

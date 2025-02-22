@@ -5,7 +5,7 @@ import { routes } from './routes'
 
 const router = createBrowserRouter(routes)
 
-export const StandaloneApp = () => (
+export const App = () => (
     <Providers>
         <RouterProvider router={router} />
     </Providers>

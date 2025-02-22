@@ -1,3 +1,3 @@
-import { lazily } from 'react-lazily'
+import { lazy } from 'react'
 
-export const { List } = lazily(() => import('./List'))
+export const List = lazy(() => import('./List').then((module) => ({ default: module.List })))

@@ -27,4 +27,4 @@ export const pokemonApi = createApi({
     }),
 })
 
-export const { usePokemonsQuery, usePokemonQuery } = pokemonApi
+export const { usePokemonQuery, usePokemonsQuery } = pokemonApi
